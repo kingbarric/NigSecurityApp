@@ -46,6 +46,7 @@ public class MediaFacadeREST extends AbstractFacade<Media> {
     @Path("{id}")
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public void edit(@PathParam("id") Integer id, Media entity) {
+        System.out.println("Timeing");
         super.edit(entity);
     }
 
