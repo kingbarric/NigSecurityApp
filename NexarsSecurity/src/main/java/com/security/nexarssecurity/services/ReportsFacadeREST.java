@@ -25,7 +25,7 @@ import javax.ws.rs.core.MediaType;
  * @author Barima
  */
 @Stateless
-@Path("com.security.nexarssecurity.entities.reports")
+@Path("reports")
 public class ReportsFacadeREST extends AbstractFacade<Reports> {
 
     @PersistenceContext(unitName = "com.barricrebirthsystem_NexarsSecurity_war_1.0-SNAPSHOTPU")

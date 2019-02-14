@@ -25,7 +25,7 @@ import javax.ws.rs.core.MediaType;
  * @author Barima
  */
 @Stateless
-@Path("com.security.nexarssecurity.entities.privatemessages")
+@Path("privatemessages")
 public class PrivateMessagesFacadeREST extends AbstractFacade<PrivateMessages> {
 
     @PersistenceContext(unitName = "com.barricrebirthsystem_NexarsSecurity_war_1.0-SNAPSHOTPU")

@@ -22,10 +22,10 @@ import javax.ws.rs.core.MediaType;
 
 /**
  *
- * @author Barima
+ * @author Titus
  */
 @Stateless
-@Path("com.security.nexarssecurity.entities.citizens")
+@Path("citizens")
 public class CitizensFacadeREST extends AbstractFacade<Citizens> {
 
     @PersistenceContext(unitName = "com.barricrebirthsystem_NexarsSecurity_war_1.0-SNAPSHOTPU")
