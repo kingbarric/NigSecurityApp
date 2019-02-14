@@ -38,6 +38,9 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Media.findByIsCensored", query = "SELECT m FROM Media m WHERE m.isCensored = :isCensored")})
 public class Media implements Serializable {
 
+    @OneToMany(mappedBy = "mediaId")
+    private List<FacialFeature> facialFeatureList;
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -148,6 +151,15 @@ public class Media implements Serializable {
     @Override
     public String toString() {
         return "com.security.nexarssecurity.entities.Media[ id=" + id + " ]";
+    }
+
+    @XmlTransient
+    public List<FacialFeature> getFacialFeatureList() {
+        return facialFeatureList;
+    }
+
+    public void setFacialFeatureList(List<FacialFeature> facialFeatureList) {
+        this.facialFeatureList = facialFeatureList;
     }
     
 }
